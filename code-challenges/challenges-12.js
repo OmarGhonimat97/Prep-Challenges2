@@ -19,16 +19,19 @@
 
 const oddFiltration = (arr) => {
     // write your code here
-    let arrOdd = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 !== 0) {
-           arrOdd.push(arr[i]);
-        }
-    }
-    return arrOdd;
+    // let arrOdd = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 !== 0) {
+    //        arrOdd.push(arr[i]);
+    //     }
+    // }
+    // return arrOdd;
     
-    let oddValue = arr.filter(oddFiltration);
-    return oddValue;
+    // let oddValue = arr.filter(oddFiltration);
+    // return oddValue;
+
+    let odds = arr.filter(n => n%2)
+    return odds
 }
 
 
