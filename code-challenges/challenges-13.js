@@ -65,9 +65,13 @@ return counter
 
 const stringReverse = (str) => {
     // write your code here
-    return str.split("").reduce((rev, char)=> char + rev, ''); 
-    // str.reduce(stringReverse => {
-
+    // let newStr = str.split(' ');
+    // newStr.reduce(() => {
+        
+    // })
+    let x = str.split(" ").reduce((acc, value)=> acc + " " + value, ''); 
+    // str.reduce((stringReverse, initialValue) => {
+return x.slice(0,-1);
     // })
 
  
