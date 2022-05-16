@@ -16,13 +16,30 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-    // let x=0;
     // let newArr=[];
-    // newArr.push(int1);
-    // for (let i=0; i<int1-int2; i++) {
-        
-
+    // let x =int1-int2;
+    // if (x==(int1%int2)-int2) {
+    //     recursionPattern (x,-int2)
+    //     newArr.push(x);
+    // }else {
+    //     recursionPattern(x,int2)
+    //     newArr.push(x);
     // }
+    let int3=int1;
+    let int4 =int2 ;
+    let newArr=[];
+    // newArr.push(int1);
+    for (let i=0; i<int1/int2 +1; i++) {
+    newArr.push(int3);
+    int3=int3-int4;
+    }
+  int3 = int3+int4;
+    for (let i = 0; i < int1/int2; i++) {
+        int3 = int3+int4;
+        newArr.push(int3);
+    }
+return newArr;
+    }
 //     function printPattern(n, m, flag)
 // {
      
@@ -51,7 +68,7 @@ const recursionPattern = (int1, int2) => {
 //     // If flag is false.
 //     else
 //         printPattern(n, m + 5, false);
-// }
+// 
 
 }
 // -------------------------------------------------------------------------------------------------------
