@@ -16,59 +16,24 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-    // let newArr=[];
-    // let x =int1-int2;
-    // if (x==(int1%int2)-int2) {
-    //     recursionPattern (x,-int2)
-    //     newArr.push(x);
-    // }else {
-    //     recursionPattern(x,int2)
-    //     newArr.push(x);
-    // }
-    let int3=int1;
-    let int4 =int2 ;
-    let newArr=[];
-    // newArr.push(int1);
-    for (let i=0; i<int1/int2 +1; i++) {
+    let newArr = [];
+    newArr.push(int1);
+    let int3 = int1 - int2;
     newArr.push(int3);
-    int3=int3-int4;
+    while (int3 >= 0) {
+        int3 = int3 - int2;
+        newArr.push(int3);
+        recursionPattern(int3, int2);
     }
-  int3 = int3+int4;
-    for (let i = 0; i < int1/int2; i++) {
-        int3 = int3+int4;
+    while (int3 != int1) {
+        int3 = int3 + int2;
         newArr.push(int3);
     }
-return newArr;
-    }
-//     function printPattern(n, m, flag)
-// {
-     
-//     // Print m.
-//     document.write(m + " ");
- 
-//     // If we are moving back toward the n and
-//     // we have reached there, then we are done
-//     if (flag == false && n == m)
-//         return;
- 
-//     // If we are moving toward 0 or negative.
-//     if (flag)
-//     {
-         
-//         // If m is greater, then 5, recur with
-//         // true flag
-//         if (m - 5 > 0)
-//             printPattern(n, m - 5, true);
-             
-//         // Recur with false flag
-//         else
-//             printPattern(n, m - 5, false);
-//     }
-     
-//     // If flag is false.
-//     else
-//         printPattern(n, m + 5, false);
-// 
+
+    return newArr;
+}
+
+
 
 
 // -------------------------------------------------------------------------------------------------------
